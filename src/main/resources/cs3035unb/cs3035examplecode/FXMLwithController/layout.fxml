@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="cs3035unb.cs3035examplecode.FXMLwithController.Controller"
+      prefHeight="400.0" prefWidth="400.0">
+    <Text fx:id="textOutput">Nothing to see here</Text>
+    <Button fx:id="changeTextButton" onAction="#updateText">Click to see something</Button>
+</VBox>
