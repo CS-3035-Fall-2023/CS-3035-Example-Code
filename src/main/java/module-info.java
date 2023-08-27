@@ -14,10 +14,20 @@ module cs3035unb.cs3035examplecode {
     exports cs3035unb.cs3035examplecode.MVCSquareDragging;
     exports cs3035unb.cs3035examplecode.CustomLayoutExample;
     exports cs3035unb.cs3035examplecode.DrawingWithShapeNodes;
+    exports cs3035unb.cs3035examplecode.BindingExample;
+    exports cs3035unb.cs3035examplecode.EventFilters;
     exports cs3035unb.cs3035examplecode.GetNotifiedOfChangeInSimpleList;
     exports cs3035unb.cs3035examplecode.ShapeHitTest;
     exports cs3035unb.cs3035examplecode.SquareDrawerWithDragSelections;
     exports cs3035unb.cs3035examplecode.FXMLwithController;
+    exports cs3035unb.cs3035examplecode.ClipboardExample;
+    exports cs3035unb.cs3035examplecode.ClippingExample;
+    exports cs3035unb.cs3035examplecode.DeterminingEventSource;
+    exports cs3035unb.cs3035examplecode.GridSnappingCanvasDrawer;
+    exports cs3035unb.cs3035examplecode.LoginExample;
+    exports cs3035unb.cs3035examplecode.ModelPropertyChange;
+    exports cs3035unb.cs3035examplecode.MultipleSceneSwitching;
+    exports cs3035unb.cs3035examplecode.SceneGraphAnimation;
     opens cs3035unb.cs3035examplecode.FXMLwithController to javafx.fxml;
 
 }
