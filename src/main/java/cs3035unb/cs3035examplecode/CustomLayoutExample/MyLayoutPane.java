@@ -1,6 +1,7 @@
 package cs3035unb.cs3035examplecode.CustomLayoutExample;
 
 import javafx.scene.Node;
+import javafx.scene.control.Control;
 import javafx.scene.layout.Pane;
 
 public class MyLayoutPane extends Pane {
@@ -10,32 +11,25 @@ public class MyLayoutPane extends Pane {
     public MyLayoutPane()
     {
         super();
-
     }
 
     @Override
-    public void layoutChildren() {
-        for (int i = 0; i < getChildren().size(); i++) {
-            Node n = getChildren().get(i);
+    protected void layoutChildren() {
+        double buttonWidth = this.getWidth() *.10;
+        double buttonHeight = this.getHeight() * .10;
+        double spacing = 20; // Adjust the spacing between buttons
+        double x = 0, y = 0;
+        for (Node node : getChildren()) {
 
-            //compute the size based on the internals of the node
-            n.autosize();
+                node.maxHeight(buttonHeight);
+                node.maxWidth(buttonWidth);
+                node.resizeRelocate(x, y, buttonWidth, buttonHeight);
 
-            //alternatively the size can be determined using max, min, and/or pref size
-            //based on your layout algorithm
-//            n.prefWidth(100);
-//            n.prefHeight(100);
-
-            n.autosize();
-
-            //relocate vs translate:
-            // layout algorithms should use relocate by convention
-            // application programmers would use translate
-            n.relocate(this.getWidth() - n.getBoundsInParent().getWidth(),this.getHeight() - n.getBoundsInParent().getHeight());
-            //n.translateXProperty().set(-100);
+                // Calculate the position of the next child
+                x += (buttonWidth + spacing);
+                y += (buttonHeight + spacing);
 
         }
-        System.out.println(count++);
-
+        System.out.println(++count);
     }
 }
